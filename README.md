@@ -6,7 +6,7 @@
 ## Install
 
 ```console
-composer require antikirra/udp-pool:^1
+composer require antikirra/udp-pool:^0.0.2
 ```
 
 ## Basic usage
