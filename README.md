@@ -3,8 +3,6 @@
 ![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/antikirra/udp-pool/php)
 ![Packagist Version](https://img.shields.io/packagist/v/antikirra/udp-pool)
 
-Generates unique and guaranteed identifiers based on the current timestamp.
-
 ## Install
 
 ```console
