@@ -8,16 +8,16 @@ class Client
 {
     private array $clients = [];
 
-    public function add(string $name, string $serverAddress, int $serverPort): void
+    public function add(string $name, string $serverAddress, int $serverPort): self
     {
         if ($this->clients[$name] ?? false) {
-            return;
+            return $this;
         }
 
         $socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
 
         if ($socket === false) {
-            return;
+            return $this;
         }
 
         $this->clients[$name] = [
@@ -25,6 +25,8 @@ class Client
             'address' => $serverAddress,
             'port' => $serverPort,
         ];
+
+        return $this;
     }
 
     public function send(string $name, string $message): void
@@ -37,14 +39,16 @@ class Client
         socket_sendto($client['socket'], $message, strlen($message), 0, $client['address'], $client['port']);
     }
 
-    public function remove(string $name): void
+    public function remove(string $name): self
     {
         if (!($this->clients[$name] ?? false)) {
-            return;
+            return $this;
         }
 
         socket_close($this->clients[$name]['socket']);
         unset($this->clients[$name]);
+
+        return $this;
     }
 
     public function __destruct()
