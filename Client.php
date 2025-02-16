@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Antikirra\UdpPool;
 
-class UdpClientPool
+class Client
 {
     private array $clients = [];
 
