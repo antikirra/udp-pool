@@ -1,0 +1,24 @@
+{
+  "name": "antikirra/udp-pool",
+  "minimum-stability": "dev",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Antikirra\\UdpPool\\": ""
+    }
+  },
+  "authors": [
+    {
+      "name": "Kirill Tkachenko",
+      "email": "antikirra@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "ext-sockets": "*"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
