@@ -1,12 +1,11 @@
-# Simple UPD Pool for PHP
+# Lightweight UPD Pool for PHP
 
 ![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/antikirra/udp-pool/php)
 ![Packagist Version](https://img.shields.io/packagist/v/antikirra/udp-pool)
 
-A lightweight PHP wrapper designed to simplify the management of multiple UDP connections within a single project. With
-an intuitive API, it allows you to add and handle several UDP endpoints by assigning them unique identifiers, IP
-addresses, and ports. This tool is ideal for scenarios such as logging, event tracking, or statistics collection where
-efficient UDP communication is required.
+UDP Pool is a lightweight PHP wrapper for managing multiple UDP connections. Its intuitive API lets you register
+endpoints using unique keys, IP addresses, and ports. Embracing the nature of UDP, it doesn't handle retransmissions or
+error corrections, making it ideal for logging, event tracking, and statistics collection.
 
 ## Install
 
